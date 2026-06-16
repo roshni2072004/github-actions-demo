@@ -1,5 +1,12 @@
-name: 
-on: workflow_dispatch
+name: Hello world
+# on: ["push","pull_request"]
+on: 
+  push:
+    branches:
+      - main, deploy, 'release/*'
+  pull_request:
+    branches:
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
